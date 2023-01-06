@@ -8,7 +8,7 @@ class FiltersScreen extends StatefulWidget {
   final Function saveFilters;
   final Map<String, bool> currentFilters;
 
-  FiltersScreen(this.currentFilters, this.saveFilters);
+  const FiltersScreen(this.currentFilters, this.saveFilters, {super.key});
 
   @override
   _FiltersScreenState createState() => _FiltersScreenState();

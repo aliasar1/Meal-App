@@ -8,7 +8,7 @@ class MealDetailScreen extends StatelessWidget {
   final Function toggleFavorite;
   final Function isFavorite;
 
-  MealDetailScreen(this.toggleFavorite, this.isFavorite);
+  const MealDetailScreen(this.toggleFavorite, this.isFavorite, {super.key});
 
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
@@ -46,7 +46,7 @@ class MealDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
+            SizedBox(
               height: 300,
               width: double.infinity,
               child: Image.network(
@@ -58,7 +58,7 @@ class MealDetailScreen extends StatelessWidget {
             buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   child: Padding(
                       padding: const EdgeInsets.symmetric(
                         vertical: 5,
@@ -76,6 +76,7 @@ class MealDetailScreen extends StatelessWidget {
                   children: [
                     ListTile(
                       leading: CircleAvatar(
+                        backgroundColor: Colors.pink,
                         child: Text('# ${(index + 1)}'),
                       ),
                       title: Text(
@@ -94,6 +95,7 @@ class MealDetailScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(
           isFavorite(mealId) ? Icons.star : Icons.star_border,
+          color: Colors.black,
         ),
         onPressed: () => toggleFavorite(mealId),
       ),

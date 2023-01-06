@@ -8,7 +8,7 @@ import '../models/meal.dart';
 class TabsScreen extends StatefulWidget {
   final List<Meal> favoriteMeals;
 
-  TabsScreen(this.favoriteMeals);
+  const TabsScreen(this.favoriteMeals, {super.key});
 
   @override
   _TabsScreenState createState() => _TabsScreenState();
@@ -49,9 +49,9 @@ class _TabsScreenState extends State<TabsScreen> {
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.pink,
         unselectedItemColor: Colors.white,
-        selectedItemColor: Theme.of(context).accentColor,
+        selectedItemColor: Theme.of(context).colorScheme.secondary,
         currentIndex: _selectedPageIndex,
         // type: BottomNavigationBarType.fixed,
         items: [
