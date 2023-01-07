@@ -2,11 +2,11 @@
 
 This is the project I build when learning flutter. This app helps to list and see different food categories. 
 This also helps to find wonderful recipes with all the ingredients to make it tasty. 
-You can also favourite the food. User can also filter out the type of food he wants according to his preferances.
+You can also favourite the food. User can also filter out the type of food he wants according to his preferences.
 
 ## Features 👀
 1. See different food categories.
-2. Choose food according to your preferance.
+2. Choose food according to your preference.
 3. See ingrdients and steps to make recipe.
 4. Mark dishes as favourites.
 5. Filter food by Gluten free, lactose free, Vegetarian or Vegan.
